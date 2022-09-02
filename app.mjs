@@ -1,7 +1,7 @@
 //MODULES
-const {Intents,Client}=require("discord.js");
-const Discord=require("discord.js");
-const fetch=require("node-fetch");
+const { Intents, Client } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+const fetch = require("node-fetch");
 require("dotenv").config();
 
 //CONFIGS
@@ -57,7 +57,7 @@ client.on("messageCreate",msg=>{
                         if(res.title){
                             const obj=res;
 
-                            const embmsg=new Discord.MessageEmbed().setColor('#00FF00')
+                            const embmsg=new MessageEmbed().setColor('#00FF00')
                                 .setTitle(obj.title)
                                 .setDescription(`Year in which it was produced is ${obj.year} \n Duration of movie/series`)
                                 .setThumbnail(obj.image.url)
